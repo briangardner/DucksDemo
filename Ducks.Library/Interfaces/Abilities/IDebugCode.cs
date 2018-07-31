@@ -1,4 +1,4 @@
-﻿namespace Ducks.Library.Interfaces
+﻿namespace Ducks.Library.Interfaces.Abilities
 {
     public interface IDebugCode
     {

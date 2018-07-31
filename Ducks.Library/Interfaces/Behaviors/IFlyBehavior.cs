@@ -1,4 +1,4 @@
-﻿namespace Ducks.Library.Interfaces
+﻿namespace Ducks.Library.Interfaces.Behaviors
 {
     public interface IFlyBehavior
     {

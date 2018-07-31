@@ -1,25 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Ducks.Library.Interfaces;
 using Ducks.Library.Interfaces.Abilities;
 using Ducks.Library.Interfaces.Behaviors;
 
-namespace Ducks.Library.Abstract
+namespace Ducks.Library.OtherThings
 {
-    public abstract class Duck : ICanFly
+    //Definitely not a duck.  But it can fly.
+    public class Airplane : ICanFly
     {
         private IFlyBehavior _flyBehavior;
-        private ISoundBehavior _soundBehavior;
 
-        protected Duck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior)
+        public Airplane(IFlyBehavior flyBehavior)
         {
             _flyBehavior = flyBehavior;
-            _soundBehavior = soundBehavior;
         }
-        public void MakeSound()
-        {
-            _soundBehavior.MakeSound();
-        }
-
         public void PerformFly()
         {
             _flyBehavior.Fly();
@@ -29,8 +27,5 @@ namespace Ducks.Library.Abstract
         {
             _flyBehavior = flyBehavior;
         }
-
-
-        public abstract void Display();
     }
 }

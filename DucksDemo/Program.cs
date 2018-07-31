@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 using Ducks.Library.Abstract;
 using Ducks.Library.Behaviors.Flying;
 using Ducks.Library.Behaviors.Sounds;
+using Ducks.Library.Behaviors.SwimBehavior;
 using Ducks.Library.Ducks;
+using Ducks.Library.Interfaces;
+using Ducks.Library.Interfaces.Abilities;
+using Ducks.Library.OtherThings;
 
 
 namespace DucksDemo
@@ -25,13 +29,46 @@ namespace DucksDemo
 
             foreach (var duck in ducks)
             {
+                Console.WriteLine(duck.ToString());
                 duck.Display();
-                duck.PerformFly();
                 duck.MakeSound();
+                duck.PerformFly();
+                if (duck is ICanSwim swimmingDuck)
+                {
+                    swimmingDuck.Swim();
+                }
+                
                 Console.WriteLine();
             }
 
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Decoy Duck sample");
+            var decoyDuck = new DecoyDuck(new NoFlyBehavior(), new NoSoundBehavior());
+            decoyDuck.Swim();
+            decoyDuck.SetSwimBehavior(new SubmarineSwimBehavior());
+            decoyDuck.Swim();
+
+            ShowFlyableThings();
+
             Console.ReadKey();
+        }
+
+        private static void ShowFlyableThings()
+        {
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Showing flyable things.");
+            var flyableThings = new List<ICanFly>()
+            {
+                new WoodDuck(new FlyWithWingsBehavior(), new QuackBehavior()),
+                new Airplane(new FlyWithWingsBehavior())
+            };
+
+            foreach (var flyable in flyableThings)
+            {
+                Console.WriteLine(flyable.GetType().ToString());
+                flyable.PerformFly();
+            }
         }
     }
 }

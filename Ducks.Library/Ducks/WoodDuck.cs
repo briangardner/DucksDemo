@@ -1,6 +1,7 @@
 ﻿using System;
 using Ducks.Library.Abstract;
 using Ducks.Library.Interfaces;
+using Ducks.Library.Interfaces.Behaviors;
 
 namespace Ducks.Library.Ducks
 {

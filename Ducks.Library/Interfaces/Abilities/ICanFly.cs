@@ -1,4 +1,6 @@
-﻿namespace Ducks.Library.Interfaces
+﻿using Ducks.Library.Interfaces.Behaviors;
+
+namespace Ducks.Library.Interfaces.Abilities
 {
     public interface ICanFly
     {

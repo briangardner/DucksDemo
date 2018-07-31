@@ -50,14 +50,19 @@
     <Compile Include="Behaviors\Flying\NoFlyBehavior.cs" />
     <Compile Include="Behaviors\Sounds\NoSoundBehavior.cs" />
     <Compile Include="Behaviors\Sounds\QuackBehavior.cs" />
+    <Compile Include="Behaviors\SwimBehavior\FloatSwimBehavior.cs" />
+    <Compile Include="Behaviors\SwimBehavior\SubmarineSwimBehavior.cs" />
     <Compile Include="Ducks\DecoyDuck.cs" />
     <Compile Include="Ducks\Mallard.cs" />
     <Compile Include="Ducks\RubberDuck.cs" />
     <Compile Include="Ducks\WoodDuck.cs" />
-    <Compile Include="Interfaces\ICanFly.cs" />
-    <Compile Include="Interfaces\IDebugCode.cs" />
-    <Compile Include="Interfaces\IFlyBehavior.cs" />
-    <Compile Include="Interfaces\ISoundBehavior.cs" />
+    <Compile Include="Interfaces\Abilities\ICanFly.cs" />
+    <Compile Include="Interfaces\Abilities\ICanSwim.cs" />
+    <Compile Include="Interfaces\Abilities\IDebugCode.cs" />
+    <Compile Include="Interfaces\Behaviors\IFlyBehavior.cs" />
+    <Compile Include="Interfaces\Behaviors\ISoundBehavior.cs" />
+    <Compile Include="Interfaces\Behaviors\ISwimBehavior.cs" />
+    <Compile Include="OtherThings\Airplane.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

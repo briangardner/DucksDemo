@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Ducks.Library.Abstract;
 using Ducks.Library.Interfaces;
+using Ducks.Library.Interfaces.Abilities;
+using Ducks.Library.Interfaces.Behaviors;
 
 namespace Ducks.Library.Ducks
 {

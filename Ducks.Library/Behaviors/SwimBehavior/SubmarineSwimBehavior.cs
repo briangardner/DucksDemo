@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using Ducks.Library.Interfaces;
 using Ducks.Library.Interfaces.Behaviors;
 
-namespace Ducks.Library.Behaviors.Flying
+namespace Ducks.Library.Behaviors.SwimBehavior
 {
-    public class FlyWithWingsBehavior : IFlyBehavior
+    public class SubmarineSwimBehavior : ISwimBehavior
     {
-        public void Fly()
+        public void DoSwim()
         {
-            Console.WriteLine("I'm flying with my wings!  Flap Flap!");
+            Console.WriteLine("Dive Dive Dive!");
         }
     }
 }
