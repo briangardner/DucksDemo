@@ -11,12 +11,11 @@ using Ducks.Library.Interfaces.Behaviors;
 
 namespace Ducks.Library.Ducks
 {
-    public class DecoyDuck : Duck, ICanSwim
+    public class DecoyDuck : Duck
     {
-        private ISwimBehavior _swimBehavior;
         public DecoyDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior) : base(flyBehavior, soundBehavior)
         {
-            _swimBehavior = new FloatSwimBehavior();
+            SwimBehavior = new SinkSwimBehavior();
         }
 
         //TODO: Yeah, I can't swim either.  Only float.
@@ -26,14 +25,5 @@ namespace Ducks.Library.Ducks
             Console.WriteLine("I look like a normal duck, but I'm made of wood.");
         }
 
-        public void Swim()
-        {
-            _swimBehavior.DoSwim();
-        }
-
-        public void SetSwimBehavior(ISwimBehavior behavior)
-        {
-            _swimBehavior = behavior;
-        }
     }
 }
