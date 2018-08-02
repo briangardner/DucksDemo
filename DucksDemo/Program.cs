@@ -28,6 +28,11 @@ namespace DucksDemo
                 new WoodDuck(new NoFlyBehavior(), new QuackBehavior()),
                 new RubberDuck(new NoFlyBehavior(), new QuackBehavior()),
                 // end of changes.
+                // This will simulate changes made by another user.
+                new Mallard(new NoFlyBehavior(), new NoSoundBehavior()),
+                new RubberDuck(new FlyWithWingsBehavior(), new QuackBehavior()), //yes, a quacking, flying rubber duck
+                new DecoyDuck(new NoFlyBehavior(), new QuackBehavior()),
+                // End of new ducks
                 new RubberDuck(new NoFlyBehavior(), new NoSoundBehavior()),
                 new DecoyDuck(new NoFlyBehavior(), new NoSoundBehavior())
             };
