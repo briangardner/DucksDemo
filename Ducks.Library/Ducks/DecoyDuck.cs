@@ -16,7 +16,7 @@ namespace Ducks.Library.Ducks
         private ISwimBehavior _swimBehavior;
         public DecoyDuck(IFlyBehavior flyBehavior, ISoundBehavior soundBehavior) : base(flyBehavior, soundBehavior)
         {
-            _swimBehavior = new FloatSwimBehavior();
+            _swimBehavior = new SubmarineSwimBehavior();
         }
 
         //TODO: Yeah, I can't swim either.  Only float.

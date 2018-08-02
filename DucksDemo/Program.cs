@@ -23,6 +23,11 @@ namespace DucksDemo
             {
                 new Mallard(new FlyWithWingsBehavior(), new QuackBehavior()),
                 new WoodDuck(new FlyWithWingsBehavior(), new QuackBehavior()),
+                // Making changes in the same spot as another user, and I haven't pulled their changes.
+                new WoodDuck(new FlyWithWingsBehavior(), new NoSoundBehavior()),
+                new WoodDuck(new NoFlyBehavior(), new QuackBehavior()),
+                new RubberDuck(new NoFlyBehavior(), new QuackBehavior()),
+                // end of changes.
                 new RubberDuck(new NoFlyBehavior(), new NoSoundBehavior()),
                 new DecoyDuck(new NoFlyBehavior(), new NoSoundBehavior())
             };
