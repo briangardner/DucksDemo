@@ -48,6 +48,7 @@
     <Compile Include="Abstract\Duck.cs" />
     <Compile Include="Behaviors\Flying\FlyWithWingsBehavior.cs" />
     <Compile Include="Behaviors\Flying\NoFlyBehavior.cs" />
+    <Compile Include="Behaviors\Flying\RocketPoweredFlyingBehavior.cs" />
     <Compile Include="Behaviors\Sounds\NoSoundBehavior.cs" />
     <Compile Include="Behaviors\Sounds\QuackBehavior.cs" />
     <Compile Include="Behaviors\SwimBehavior\FloatSwimBehavior.cs" />
