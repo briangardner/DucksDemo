@@ -51,6 +51,7 @@
     <Compile Include="Behaviors\Sounds\NoSoundBehavior.cs" />
     <Compile Include="Behaviors\Sounds\QuackBehavior.cs" />
     <Compile Include="Behaviors\SwimBehavior\FloatSwimBehavior.cs" />
+    <Compile Include="Behaviors\SwimBehavior\MotorPoweredSwimBehavior.cs" />
     <Compile Include="Behaviors\SwimBehavior\SinkSwimBehavior.cs" />
     <Compile Include="Behaviors\SwimBehavior\SubmarineSwimBehavior.cs" />
     <Compile Include="Ducks\DecoyDuck.cs" />
